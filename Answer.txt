@@ -1,0 +1,4 @@
+Câu 1: 
+Khi người dùng chọn "Cancel" trong hộp thoại, cửa sổ sẽ đóng, tài nguyên sẽ không được lưu và cũng không có chuyện gì xảy ra.
+
+Câu 2:
