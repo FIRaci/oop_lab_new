@@ -8,6 +8,10 @@ public class Cart {
     private ArrayList<DigitalVideoDisc> itemsOrdered = new ArrayList<DigitalVideoDisc>();
     private int qtyOrdered = 0;
 
+    public int getQtyOrdered() {
+         return this.qtyOrdered;
+     }
+
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
             itemsOrdered.add(disc);

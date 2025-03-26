@@ -2,6 +2,10 @@ package main;
 
 public class DigitalVideoDisc {
     
+     public static int nbDigitalVideoDiscs = 0;
+ 
+     private int id;
+
     private String title;
     private String category;
     private String director;
@@ -28,10 +32,19 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public int getId() {
+        return id;
+     }
+
     // Overloaded constructors
 
     public DigitalVideoDisc(String title) {
         this.title = title;
+
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
+        System.out.println("Tạo DVD với ID = " + id + ", Tất cả DVDS đã có đến thời điểm hiện tại = " + nbDigitalVideoDiscs);
+
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {

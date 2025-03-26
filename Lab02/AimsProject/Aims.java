@@ -50,6 +50,13 @@ public class Aims {
          System.out.println("\nSử dụng varargs");
          printCart(cart);
 
+         System.out.println("\nKiểm tra thành viên lớp và thành viên thể hiện");
+         System.out.println("\nNumber of DVDs: " + DigitalVideoDisc.nbDigitalVideoDiscs);
+         System.out.println("Number of DVDs in the cart no2: " + cart.getQtyOrdered());
+         System.out.println("Id of the first DVD: " + dvd4.getId());
+         System.out.println("Id of the fourth DVD: " + dvd7.getId());
+         System.out.println("Id of the fifth DVD: " + dvd8.getId());
+
     }
 
     public static void printCart(Cart cart) {
