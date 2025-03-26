@@ -1,0 +1,10 @@
+Section 10: 
+ Nếu cả hai constructor chỉ nhận một tham số kiểu String (một cho title, một cho category) thì Java sẽ không cho phép, vì chúng có cùng chữ ký (chỉ khác tên biến, nhưng tên biến không ảnh hưởng đến chữ ký).
+ Ví dụ:
+ 	public DigitalVideoDisc(String title) { ... }
+ 	public DigitalVideoDisc(String category) { ... }
+ Java coi cả hai đều là DigitalVideoDisc(String), nên báo lỗi trùng lặp.
+ Lý giải:
+ Java nạp chồng (overload) dựa trên kiểu, số lượng và thứ tự tham số, không dựa trên tên tham số.
+ Do đó, nếu chỉ thay đổi tên biến (từ title thành category) nhưng vẫn cùng kiểu String, thì chữ ký giống hệt nhau.
+ Như vậy câu trả lời là KHÔNG cho phép
