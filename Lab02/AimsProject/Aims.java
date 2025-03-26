@@ -29,7 +29,26 @@ public class Aims {
         printCart(anOrder);
 
         anOrder.removeDigitalVideoDisc(dvd1);
-
+ 
+ 
+         Cart cart = new Cart();
+ 
+         DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+         DigitalVideoDisc dvd5 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
+         DigitalVideoDisc dvd6 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+         DigitalVideoDisc dvd7 = new DigitalVideoDisc("The Lion King 2", "Animation", "Roger Allers", 87, 19.95f);
+         DigitalVideoDisc dvd8 = new DigitalVideoDisc("Star Wars 2", "Science Fiction", "George Lucas", 87, 24.95f);
+         DigitalVideoDisc dvd9 = new DigitalVideoDisc("Aladin 2", "Animation", 18.99f);
+ 
+         cart.addDigitalVideoDisc(dvd4, dvd5);
+ 
+         System.out.println("\nSử dụng các tham số số khác nhau");
+         printCart(cart);
+ 
+         cart.addDigitalVideoDisc(dvd6, dvd7, dvd8, dvd9);
+ 
+         System.out.println("\nSử dụng varargs");
+         printCart(cart);
 
     }
 
