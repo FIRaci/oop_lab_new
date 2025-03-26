@@ -1,0 +1,16 @@
+Section 15.
+
+1.Java là ngôn ngữ Pass by Value.
+Khi truyền một biến (bao gồm cả biến tham chiếu đến đối tượng) vào phương thức, Java sẽ sao chép giá trị tham chiếu đó, rồi truyền bản sao vào phương thức.
+Điều này có nghĩa là bên trong phương thức, không thể thay đổi biến gốc ở bên ngoài (ví dụ: không thể hoán đổi hai đối tượng bằng cách hoán đổi tham chiếu), vì chỉ thao tác trên bản sao của tham chiếu.
+Tuy nhiên, nội dung của đối tượng (mà tham chiếu trỏ tới) vẫn có thể bị thay đổi, do cả bản sao tham chiếu và tham chiếu gốc đều trỏ tới cùng một đối tượng trong bộ nhớ.
+
+2.Trong Java, khi gọi swap(jungleDVD, cinderellaDVD), các tham số được truyền theo giá trị (pass by value).
+Bên trong hàm swap, biến o1 và o2 chỉ là bản sao của hai tham chiếu jungleDVD và cinderellaDVD trong main.
+Dù có hoán đổi o1 và o2, thì tham chiếu gốc jungleDVD và cinderellaDVD ở bên ngoài không bị hoán đổi.
+Kết quả: Tiêu đề (title) của các đối tượng mà jungleDVD và cinderellaDVD trỏ tới vẫn giữ nguyên, không bị tráo đổi.
+
+3.Trong changeTitle, thực hiện truyền tham chiếu của jungleDVD (dưới tên dvd) và một chuỗi (cinderellaDVD.getTitle()).
+Dòng dvd.setTitle(title) thay đổi thuộc tính title của đối tượng mà dvd (và cũng là jungleDVD) đang trỏ tới. Vì cả dvd và jungleDVD cùng trỏ đến cùng một đối tượng trong bộ nhớ, nên title của đối tượng đó thay đổi.
+Dòng dvd = new DigitalVideoDisc(oldTitle); chỉ làm dvd (trong phương thức) trỏ sang một đối tượng mới, không ảnh hưởng đến jungleDVD ở bên ngoài.
+Kết quả: jungleDVD (ở bên ngoài) vẫn trỏ tới đối tượng cũ, nhưng đối tượng này đã bị đổi title thành giá trị mới. Vì vậy, khi in ra ta thấy tiêu đề bị thay đổi.
