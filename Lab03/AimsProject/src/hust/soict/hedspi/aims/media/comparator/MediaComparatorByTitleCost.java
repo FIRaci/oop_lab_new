@@ -1,4 +1,4 @@
-package hust.soict.hedspi.aims.mediacomparator;
+package hust.soict.hedspi.aims.media.comparator;
 
 import java.util.Comparator;
 import hust.soict.hedspi.aims.media.Media;

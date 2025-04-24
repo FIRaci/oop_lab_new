@@ -1,8 +1,8 @@
 package hust.soict.hedspi.aims.media;
 
 import java.util.Comparator;
-import hust.soict.hedspi.aims.mediacomparator.MediaComparatorByCostTitle;
-import hust.soict.hedspi.aims.mediacomparator.MediaComparatorByTitleCost;
+import hust.soict.hedspi.aims.media.comparator.MediaComparatorByCostTitle;
+import hust.soict.hedspi.aims.media.comparator.MediaComparatorByTitleCost;
 
 public class Media {
     private static int nbMedia = 0;
